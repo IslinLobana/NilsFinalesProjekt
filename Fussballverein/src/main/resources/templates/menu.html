@@ -1,0 +1,85 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ToDo Spring</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            
+            
+            <li th:if="${activePage == 'home'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/?activePage=home}">Home</a>
+            </li>
+            <li th:unless="${activePage == 'home'}" class="nav-item">
+                <a class="nav-link" th:href="@{/?activePage=home}">Home</a>
+            </li>
+
+            <!--
+            <li th:if="${activePage == 'todos'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/todos}">ToDos</a>
+            </li>
+            <li th:unless="${activePage == 'todos'}" class="nav-item">
+                <a class="nav-link" th:href="@{/todos}">ToDos</a>
+            </li>
+            -->
+            <li th:if="${activePage == 'spieler'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/spieler}">Spieler</a>
+            </li>
+            <li th:unless="${activePage == 'spieler'}" class="nav-item">
+                <a class="nav-link" th:href="@{/spieler}">Spieler</a>
+            </li>
+
+            <li th:if="${activePage == 'personal'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/personal}">Personal</a>
+            </li>
+            <li th:unless="${activePage == 'personal'}" class="nav-item">
+                <a class="nav-link" th:href="@{/personal}">Personal</a>
+            </li>
+
+            <li th:if="${activePage == 'stadion'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/stadion}">Stadion</a>
+            </li>
+            <li th:unless="${activePage == 'stadion'}" class="nav-item">
+                <a class="nav-link" th:href="@{/stadion}">Stadion</a>
+            </li>
+
+            <li th:if="${activePage == 'money'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/money}">Finanzen</a>
+            </li>
+            <li th:unless="${activePage == 'money'}" class="nav-item">
+                <a class="nav-link" th:href="@{/money}">Finanzen</a>
+            </li>
+            <!--
+            <li th:if="${activePage == 'forexample'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/forexample}">For-Example</a>
+            </li>
+            <li th:unless="${activePage == 'forexample'}" class="nav-item">
+                <a class="nav-link" th:href="@{/forexample}">For-Example</a>
+            </li>
+            -->
+
+            <!--
+            <li th:if="${activePage == 'cards'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/cards}">Karten</a>
+            </li>
+            <li th:unless="${activePage == 'cards'}" class="nav-item">
+                <a class="nav-link" th:href="@{/cards}">Karten</a>
+            </li>
+            -->
+            <li th:if="${activePage == 'impressum'}" class="nav-item active">
+                <a class="nav-link" th:href="@{/?activePage=impressum}">
+                    Impressum
+                </a>
+            </li>
+            <li th:unless="${activePage == 'impressum'}" class="nav-item">
+                <a class="nav-link" th:href="@{/?activePage=impressum}">Impressum</a>
+            </li>
+
+            
+
+
+        </ul>
+        </div>
+    </nav>
+</div>

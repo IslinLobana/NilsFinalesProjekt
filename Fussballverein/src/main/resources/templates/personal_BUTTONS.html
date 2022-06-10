@@ -1,0 +1,14 @@
+<h2 th:text="'Deine Personal (' + ${#arrays.length(personal)} + ')'"></h2>
+<hr>
+<span th:each="personal, personalStat: ${personal}">
+    <a class="btn btn-secondary mt-2" th:text="${personal}" th:href="@{/delpersonal(id=${personalStat.index})}"></a>
+</span>
+<hr>
+<form th:action="@{/addpersonal}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Neues Personal" th:name="personalVorname">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
+        </div>
+    </div>
+</form>

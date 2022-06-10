@@ -1,0 +1,14 @@
+<h2 th:text="'Deine Stadien (' + ${#arrays.length(stadion)} + ')'"></h2>
+<hr>
+<span th:each="stadion, stadionStat: ${stadion}">
+    <a class="btn btn-secondary mt-2" th:text="${stadion}" th:href="@{/delstadion(id=${stadionStat.index})}"></a>
+</span>
+<hr>
+<form th:action="@{/addstadion}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Neues Stadion" th:name="stadionName">
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Speichern</button>
+        </div>
+    </div>
+</form>

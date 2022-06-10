@@ -1,0 +1,21 @@
+<h2>Spieler bearbeiten</h2>
+<hr>
+<form th:action="@{/updatespieler(id=${spieler.getId()})}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Vorname" th:name="spielerVorname" th:value="${spieler.getVorname}" required>
+        <input type="text" class="form-control" placeholder="Nachname" th:name="spielerNachname" th:value="${spieler.getNachname}" required>
+        <input type="text" class="form-control" placeholder="Alter" th:name="spielerAge" th:value="${spieler.getAge}" required>
+        <select class="custom-select" id="inputGroupSelect01" th:name="spielerPosition">
+            <option value="Stürmer" text="Stürmer">Stürmer</option>
+            <option value="Mittelfeld" text="Mittelfeld">Mittelfeld</option>
+            <option value="Verteidiger" text="Verteidiger">Verteidiger</option>
+            <option value="Torhüter" text="Torhüter">Torhüter</option>
+        </select>
+        <input type="text" class="form-control" placeholder="Einkommen" th:name="spielerEinkommen" th:value="${spieler.getEinkommen}" required>
+        
+        <input type="number" class="form-control" th:value="${spielerid}" th:name="spielerId" style="display: none;" >
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Aktualisieren</button>
+        </div>
+    </div>
+</form>

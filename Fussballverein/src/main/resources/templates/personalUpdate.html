@@ -1,0 +1,21 @@
+<h2>Personal bearbeiten</h2>
+<hr>
+<form th:action="@{/updatepersonal(id=${personal.getId()})}">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Vorname" th:name="personalVorname" th:value="${personal.getVorname}" required>
+        <input type="text" class="form-control" placeholder="Nachname" th:name="personalNachname" th:value="${personal.getNachname}" required>
+        <input type="text" class="form-control" placeholder="Alter" th:name="personalAge" th:value="${personal.getAge}" required>
+        <select class="custom-select" id="inputGroupSelect01" th:name="personalAufgabe">
+            <option value="Trainer" text="Trainer">Trainer</option>
+            <option value="Co-Trainer" text="Trainer">Trainer</option>
+            <option value="Zeugwart" text="Zeugwart">Zeugwart</option>
+            <option value="Arzt" text="Arzt">Arzt</option>
+        </select>
+        <input type="text" class="form-control" placeholder="Einkommen" th:name="personalEinkommen" th:value="${personal.getEinkommen}" required>
+        
+        <input type="number" class="form-control" th:value="${personalid}" th:name="personalId" style="display: none;" >
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit" id="button-addon2">Aktualisieren</button>
+        </div>
+    </div>
+</form>
